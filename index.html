@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yarra Bharath Reddy | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0f172a;
+  --text: white;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* INTRO */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 3s forwards 3s;
+}
+
+#intro h1 {
+  font-size: 40px;
+  animation: zoom 2s;
+}
+
+#intro span { color: #38bdf8; }
+
+@keyframes zoom {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(0,0,0,0.6);
+}
+
+nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero img {
+  width: 250px;
+  border-radius: 50%;
+}
+
+/* BUTTON */
+.btn {
+  background: #38bdf8;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTION */
+section {
+  padding: 60px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* BOX */
+.box {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+/* SKILL BAR */
+.skill {
+  margin: 15px 0;
+}
+
+.bar {
+  height: 10px;
+  background: gray;
+  border-radius: 10px;
+}
+
+.fill {
+  height: 10px;
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+/* CHATBOX */
+#chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  background: #1e293b;
+  border-radius: 10px;
+}
+
+#chat-header {
+  background: #38bdf8;
+  padding: 10px;
+  color: black;
+}
+
+#chat-messages {
+  height: 180px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+.chat-input button {
+  background: #38bdf8;
+  border: none;
+  padding: 8px;
+}
+
+.user { text-align: right; }
+.bot { color: #38bdf8; }
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <h1>Welcome to <span>Yarra Bharath Reddy's Portfolio</span></h1>
+</div>
+
+<!-- NAV -->
+<nav>
+  <h2>Yarra Bharath Reddy</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#soft">Soft Skills</a>
+    <a href="#cert">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Hi, I'm Yarra Bharath Reddy</h1>
+    <p>Django Developer | Data Science Student</p>
+    <a href="bharathreddyresume.pdf" download class="btn">Download Resume</a>
+  </div>
+  <img src="bharathh.jpeg">
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+
+  <p>
+    I am a passionate and dedicated B.Tech Data Science student with strong interest in web development,
+    machine learning, and real-world problem solving. I specialize in Django-based web applications
+    and continuously improve my technical skills.
+  </p>
+
+  <p>
+    I have developed projects like Pet Service Platform and EmpowerHer,
+    gaining experience in backend development, database design, and full-stack development.
+  </p>
+
+  <p>
+    My goal is to become a skilled full-stack developer and contribute to innovative tech solutions.
+  </p>
+
+  <div class="box">📍 Hyderabad, India</div>
+  <div class="box">🎓 B.Tech Data Science</div>
+  <div class="box">💻 Django Developer</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Technical Skills</h2>
+
+  <div class="skill">
+    HTML
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
+  </div>
+
+  <div class="skill">
+    CSS
+    <div class="bar"><div class="fill" style="width:85%"></div></div>
+  </div>
+
+  <div class="skill">
+    Python
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+  </div>
+
+  <div class="skill">
+    Django
+    <div class="bar"><div class="fill" style="width:75%"></div></div>
+  </div>
+
+</section>
+
+<!-- SOFT SKILLS -->
+<section id="soft">
+  <h2>Soft Skills</h2>
+  <div class="box">Communication</div>
+  <div class="box">Teamwork</div>
+  <div class="box">Problem Solving</div>
+  <div class="box">Leadership</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="cert">
+  <h2>Certifications</h2>
+  <div class="box">Python Certification</div>
+  <div class="box">Web Development Certification</div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="grid">
+
+    <!-- PET SERVICE -->
+    <div class="card">
+      <h3>Pet Service App</h3>
+      <img src="petshop.jpg">
+
+      <p>
+        Developed a full-stack web application using Django that allows users to book pet care services
+        such as grooming, veterinary, and training. Implemented admin panel, shopping cart functionality,
+        and dynamic service management.
+      </p>
+    </div>
+
+    <!-- EMPOWERHER -->
+    <div class="card">
+      <h3>EmpowerHer</h3>
+      <img src="empowerher.webp">
+
+      <p>
+        Built a women empowerment platform using Django to support entrepreneurship and skill development.
+        Designed dashboard features, user management system, and database models for efficient data handling.
+      </p>
+    </div>
+
+    <!-- VR SHOPPING -->
+    <div class="card">
+      <h3>VR Shopping</h3>
+      <img src="vrshop.webp">
+
+      <p>
+        Conceptual project focused on virtual reality shopping experience where users can explore products
+        in a 3D environment. Aimed to enhance online shopping by simulating real-world interaction.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: bharath1430m@gmail.com</p>
+</section>
+
+<!-- CHATBOX -->
+<div id="chatbox">
+  <div id="chat-header">💬 Chat Bot</div>
+  <div id="chat-messages"></div>
+  <div class="chat-input">
+    <input id="userInput" placeholder="Ask...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+function sendMessage() {
+  let input = document.getElementById("userInput");
+  let msg = input.value.toLowerCase();
+  let chat = document.getElementById("chat-messages");
+
+  if (!msg) return;
+
+  chat.innerHTML += `<div class="user">${msg}</div>`;
+
+  let reply = "I didn't understand.";
+
+  if (msg.includes("hi")) reply = "Hello 👋 Welcome!";
+  else if (msg.includes("project")) reply = "Pet App, EmpowerHer, VR Shopping.";
+  else if (msg.includes("contact")) reply = "Email: bharath1430m@gmail.com";
+  else if (msg.includes("resume")) reply = "Click download button above.";
+
+  setTimeout(()=>{
+    chat.innerHTML += `<div class="bot">${reply}</div>`;
+    chat.scrollTop = chat.scrollHeight;
+  },500);
+
+  input.value="";
+}
+</script>
+
+</body>
+</html>
